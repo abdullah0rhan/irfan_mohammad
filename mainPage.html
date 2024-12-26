@@ -3,11 +3,88 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
    
 </head>
 <body>
     <div class="math-bg" id="mathBg"></div>
     <div class="container">
+    <div class="section slider-section">
+        <h2 class="section-title">اللغة العربية</h2>
+        <div class="slider-container">
+            <button class="nav-button prev">←</button>
+            <button class="nav-button next">→</button>
+            <div class="slider">
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل الاول</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/1.pdf','chapter1.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text"></span>
+                        <span class="download-icon material-symbols-outlined">download</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل الثاني</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/2.pdf','chapter2.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل الثالث</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/3.pdf','chapter3.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل الرابع</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/4.pdf','chapter4.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل الخامس</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/3.pdf','chapter3.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">فصل السادس</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/4.pdf','chapter4.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
     <div class="section slider-section">
         <h2 class="section-title">Melezim</h2>
         <div class="slider-container">
@@ -16,9 +93,30 @@
             <div class="slider">
                 <div class="card">
                     <div class="card-image"></div>
-                    <h3 class="card-title">Card 1</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button class="download-button" onclick="downloadPDF()">
+                    <h3 class="card-title">Chapter One</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/1.pdf','chapter1.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text"></span>
+                        <span class="download-icon material-symbols-outlined">download</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Chapter Two</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/2.pdf','chapter2.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Chapter Three</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/3.pdf','chapter3.pdf')">
                         <div class="progress"></div>
                         <span class="download-text">Download</span>
                         <span class="download-icon">↓</span>
@@ -26,16 +124,37 @@
                 </div>
                 <div class="card">
                     <div class="card-image"></div>
-                    <h3 class="card-title">Card 2</h3>
-                    <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    <button class="download-button">
+                    <h3 class="card-title">Chapter Four</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/4.pdf','chapter4.pdf')">
                         <div class="progress"></div>
                         <span class="download-text">Download</span>
                         <span class="download-icon">↓</span>
                     </button>
                 </div>
-                <!-- Add more cards as needed -->
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Chapter Five</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/3.pdf','chapter3.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Chapter Six</h3>
+                    <p class="card-text"></p>
+                    <button class="download-button" onclick="downloadPDF('./melezim/4.pdf','chapter4.pdf')">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
             </div>
+
+            
         </div>
     </div>
 
@@ -81,10 +200,10 @@
     <script src="sliders.js"></script>
     <script src="mathAnimation.js"></script>
     <script>
-         function downloadPDF() {
+        function downloadPDF(path,fileName) {
             const link = document.createElement('a');
-            link.href = './melezim/3.pdf'; // Replace with your PDF path
-            link.download = 'document.pdf';
+            link.href = path; // Replace with your PDF path
+            link.download = fileName;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
