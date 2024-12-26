@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Section containers */
+        .section {
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        .slider-section {
+            background: #fff;
+        }
+
+        .contact-section {
+            background: #f9f9f9;
+        }
+
+        /* Slider styles */
+        .slider-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px 70px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .card {
+            flex: 0 0 calc(100% - 20px);
+            background: #555345;
+            border-radius: 20px;
+            box-shadow: 0 4px 26px rgba(86, 73, 71, 0.9);
+            padding: 10px;
+            margin: 30px auto;
+            height: auto;
+            min-height: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px yellow;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background: #eee;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #363633;
+            margin-bottom: 8px;
+        }
+
+        .card-text {
+            color: #030303;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(14, 13, 13, 0.9);
+            color: #fbff00;
+            border: none;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .prev { left: 5px; }
+        .next { right: 5px; }
+
+        /* Download button styles */
+        .download-button {
+            position: relative;
+            display: block;
+            padding: 10px 25px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            width: 150px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .download-button .progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: width 0.3s ease;
+        }
+
+        /* Contact and Map styles */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .map-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                flex: 0 0 calc(100% - 30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider Section -->
+    <div class="section slider-section">
+        <h2 class="section-title">Our Products</h2>
+        <div class="slider-container">
+            <button class="nav-button prev">←</button>
+            <button class="nav-button next">→</button>
+            <div class="slider">
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Card 1</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="download-button">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3 class="card-title">Card 2</h3>
+                    <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <button class="download-button">
+                        <div class="progress"></div>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">↓</span>
+                    </button>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact and Map Section -->
+    <div class="section contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="location-icon">📍</i>
+                    <p>123 Business Street, City, Country</p>
+                </div>
+                <div class="info-item">
+                    <i class="phone-icon">📞</i>
+                    <p>+1 234 567 8900</p>
+                </div>
+                <div class="info-item">
+                    <i class="email-icon">✉️</i>
+                    <p>contact@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="hours-icon">⏰</i>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat - Sun: Closed</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <div class="map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13000.328885679157!2d44.378578731274416!3d35.452758832303836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2siq!4v1735212971510!5m2!1sen!2siq" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createSlider(container) {
+            const slider = container.querySelector('.slider');
+            const cards = slider.querySelectorAll('.card');
+            const prevBtn = container.querySelector('.prev');
+            const nextBtn = container.querySelector('.next');
+            
+            let currentIndex = 0;
+            let cardWidth = cards[0].offsetWidth + 25;
+
+            function updateCardWidth() {
+                const containerWidth = container.offsetWidth - 140;
+                cardWidth = cards[0].offsetWidth + 25;
+                return Math.floor(containerWidth / cardWidth);
+            }
+
+            function goToSlide(index) {
+                const visibleCards = updateCardWidth();
+                currentIndex = Math.min(Math.max(index, 0), Math.ceil(cards.length / visibleCards) - 1);
+                const offset = -currentIndex * (visibleCards * cardWidth);
+                slider.style.transform = `translateX(${offset}px)`;
+                updateNavigation();
+            }
+
+            function updateNavigation() {
+                const visibleCards = updateCardWidth();
+                const maxIndex = Math.ceil(cards.length / visibleCards) - 1;
+                prevBtn.disabled = currentIndex <= 0;
+                nextBtn.disabled = currentIndex >= maxIndex;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (!prevBtn.disabled) {
+                    currentIndex--;
+                    goToSlide(currentIndex);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (!nextBtn.disabled) {
+                    currentIndex++;
+                    goToSlide(currentIndex);
+                }
+            });
+
+            // Download button functionality
+            const downloadButtons = container.querySelectorAll('.download-button');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (!this.classList.contains('loading')) {
+                        const progressBar = this.querySelector('.progress');
+                        const downloadText = this.querySelector('.download-text');
+                        
+                        this.classList.add('loading');
+                        downloadText.textContent = 'Downloading...';
+                        
+                        let progress = 0;
+                        const interval = setInterval(() => {
+                            progress += 1;
+                            progressBar.style.width = `${progress}%`;
+                            
+                            if (progress >= 100) {
+                                clearInterval(interval);
+                                setTimeout(() => {
+                                    this.classList.remove('loading');
+                                    downloadText.textContent = 'Download';
+                                    progressBar.style.width = '0';
+                                }, 500);
+                            }
+                        }, 30);
+                    }
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                cardWidth = cards[0].offsetWidth + 25;
+                goToSlide(currentIndex);
+            });
+
+            updateNavigation();
+        }
+
+        // Initialize all sliders
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = document.querySelectorAll('.slider-container');
+            sliders.forEach(container => createSlider(container));
+        });
+    </script>
+</body>
+</html>
