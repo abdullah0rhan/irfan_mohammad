@@ -4,11 +4,37 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root{
+  --black :#1A1A19;
+  --yellow:#F3C623;
+  --orange:#EB8317;
+  --navy:#10375C;
+  --light_yellow:#F9D276;
+  --light_navy:#083358;
+  --dark_navy:#001F3F;
+}
 body {
-  background: #424242;
-  color: #fbff00;
+  background: var(--black);
+  color:var(--yellow);
   font-family: 'Arial', sans-serif;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.aref-ruqaa-ink-regular {
+font-family: "Aref Ruqaa Ink", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.aref-ruqaa-ink-bold {
+font-family: "Aref Ruqaa Ink", serif;
+font-weight: 700;
+font-style: normal;
 }
 .container {
   text-align: center;
@@ -18,16 +44,12 @@ body {
   position: relative;
   z-index: 2;
 }
-/* Section containers */
+
 .section {
   padding: 60px 20px;
   margin-bottom: 40px;
   background-color: transparent;
 }
-
-
-
-/* Slider styles */
 .slider-container {
   width: 100%;
   max-width: 1000px;
@@ -46,9 +68,9 @@ body {
 
 .card {
   flex: 0 0 calc(100% - 20px);
-  background: #D6CFB4;
-  border-radius: 20px;
-  box-shadow:#A5BFCC;
+  background: var(--light_yellow);
+  border-radius: 0px;
+  box-shadow:var(--yellow);
   padding: 10px;
   margin: 30px auto;
   height: auto;
@@ -58,7 +80,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px #A5BFCC;
+  box-shadow: 0 8px 16px var(--yellow);
 }
 
 .card-image {
@@ -74,7 +96,7 @@ body {
 
 .card-title {
   font-size: 2.2rem;
-  color: #4C585B;
+  color: var(--black);
   margin-bottom: 8px;
 }
 
@@ -89,8 +111,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #F3EFE0;
-  color: #fbff00;
+  background: var(--yellow);
+  color: var(--black);
   border: none;
   width: 55px;
   height: 55px;
@@ -116,7 +138,7 @@ body {
   background: #434242;
   color: white;
   border: none;
-  border-radius: 25px;
+  
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -131,7 +153,7 @@ body {
   top: 0;
   width: 0;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.515);
   transition: width 0.3s ease;
 }
 
@@ -145,7 +167,7 @@ body {
 }
 
 .contact-info, .map-container {
-  background: #F4EDD3;
+  background: var(--light_navy);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -163,7 +185,7 @@ body {
 
 .section-title {
   text-align: center;
-  color: #F4EDD3;
+  color: var(--yellow);
   margin-bottom: 40px;
   font-size: 2rem;
   font-weight: bold;
