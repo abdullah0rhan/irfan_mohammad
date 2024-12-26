@@ -18,7 +18,7 @@
                     <div class="card-image"></div>
                     <h3 class="card-title">Card 1</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button class="download-button">
+                    <button class="download-button" onclick="downloadPDF()">
                         <div class="progress"></div>
                         <span class="download-text">Download</span>
                         <span class="download-icon">↓</span>
@@ -83,7 +83,7 @@
     <script>
          function downloadPDF() {
             const link = document.createElement('a');
-            link.href = '\melezim\هندسة 2025 (2).pdf'; // Replace with your PDF path
+            link.href = '\melezim\3.pdf'; // Replace with your PDF path
             link.download = 'document.pdf';
             document.body.appendChild(link);
             link.click();
