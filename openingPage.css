@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+  background: #4C585B;
+  overflow: hidden;
+  color: #F4EDD3;
+}
+
+.math-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.math-symbol {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.3;
+  animation: float-math linear infinite;
+}
+
+.container {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  fill: #64ffda;
+}
+
+.typewriter-text {
+  margin-bottom: 2rem;
+  min-height: 1.2em;
+  font-size: 3.5rem;
+  color: #F4EDD3;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #64ffda;
+  opacity: 0;
+  width: 0;
+}
+
+.typewriter-text.typing {
+  opacity: 1;
+  animation: typing 1s steps(40, end) forwards,
+             blink-caret 0.75s step-end infinite;
+}
+
+.enter-button {
+  background: #7E99A3;
+  color: #F4EDD3;
+  border: 2px solid #4C585B;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+  opacity: 0;
+  display: none;
+}
+
+.enter-button.visible {
+  display: inline-block;
+  animation: fadeIn 1s forwards;
+}
+
+.enter-button:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: scale(1.05);
+}
+
+/* Improved splash effect */
+.splash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 0px;
+  height: 0px;
+  background: #424242;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: all 1s ease-in-out;
+}
+
+.splash.active {
+  transform: translate(-50%, -50%) scale(1);
+  width: 300vw;
+  height: 300vw;
+}
+
+@keyframes float-math {
+  0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0.3;
+  }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FCDE70; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
