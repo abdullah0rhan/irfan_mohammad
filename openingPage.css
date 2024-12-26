@@ -3,7 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root{
+  --black :#1A1A19;
+  --yellow:#F3C623;
+  --orange:#EB8317;
+  --navy:#10375C;
+  --light_yellow:#F9D276;
+  --light_navy:#083358;
+  --dark_navy:#001F3F;
+}
 body {
   min-height: 100vh;
   display: flex;
@@ -11,9 +19,9 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Courier New', monospace;
-  background: #4C585B;
+  background: var(--black);
   overflow: hidden;
-  color: #F4EDD3;
+  color: var(--yellow);
 }
 
 .math-bg {
@@ -57,7 +65,7 @@ body {
   margin-bottom: 2rem;
   min-height: 1.2em;
   font-size: 3.5rem;
-  color: #F4EDD3;
+  color: var(--light_yellow);
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #64ffda;
@@ -72,13 +80,13 @@ body {
 }
 
 .enter-button {
-  background: #7E99A3;
-  color: #F4EDD3;
-  border: 2px solid #4C585B;
+  background: var(--light_yellow);
+  color: var(--black);
+  border: 2px solid var(--black);
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: bold;
-  border-radius: 9999px;
+  border-radius: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Courier New', monospace;
@@ -92,8 +100,9 @@ body {
 }
 
 .enter-button:hover {
-  background: rgba(100, 255, 218, 0.2);
-  transform: scale(1.05);
+  background: var(--yellow);
+  color: var(--black);
+  transform: scale(1.17);
 }
 
 /* Improved splash effect */
@@ -104,7 +113,7 @@ body {
   transform: translate(-50%, -50%) scale(0);
   width: 0px;
   height: 0px;
-  background: #424242;
+  background: var(--black);
   border-radius: 50%;
   z-index: 1000;
   transition: all 1s ease-in-out;
