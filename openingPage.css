@@ -79,11 +79,12 @@ body {
              blink-caret 0.75s step-end infinite;
 }
 
-.enter-button {
+.enter-button ,.markButton{
   background: var(--light_yellow);
   color: var(--black);
   border: 2px solid var(--black);
   padding: 1rem 2rem;
+  margin: 6px;
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 1px;
@@ -94,15 +95,15 @@ body {
   display: none;
 }
 
-.enter-button.visible {
+.enter-button.visible,.markButton.visible {
   display: inline-block;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 2s forwards;
 }
 
-.enter-button:hover {
+.enter-button:hover,.markButton:hover {
   background: var(--yellow);
   color: var(--black);
-  transform: scale(1.17);
+  transform: scale(1.07);
 }
 
 /* Improved splash effect */
