@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Show button after typing
           setTimeout(() => {
               document.querySelector('.enter-button').classList.add('visible');
+              document.querySelector('.markButton').classList.add('visible');
           }, 3000);
       }, 500);
   }, 100);
