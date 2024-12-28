@@ -1,4 +1,4 @@
- // Create math symbols background
+
  const mathSymbols = [
   '∫', '∑', '∏', '√', 'π', '∞', 'θ', 'Δ', 'λ', 'μ',
   'E=mc²', 'dy/dx', '∂', 'α', 'β', 'γ', 'φ', 'ω',
@@ -28,32 +28,36 @@ function createMathSymbols() {
   }
 }
 
-// Initialize page elements
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Show container
+  
   setTimeout(() => {
       document.querySelector('.container').classList.add('visible');
-      // Start typewriter
+  
       setTimeout(() => {
           document.getElementById('typewriterText').classList.add('typing');
-          // Show button after typing
+  
           setTimeout(() => {
               document.querySelector('.enter-button').classList.add('visible');
               document.querySelector('.markButton').classList.add('visible');
-          }, 3000);
+          }, 1500);
       }, 500);
   }, 100);
   
   createMathSymbols();
 
-  // Add click handler for button
+  
   document.getElementById('enterButton').addEventListener('click', function() {
       const splash = document.getElementById('splash');
       splash.classList.add('active');
       
-      // Wait for animation to complete before redirecting
+      
       setTimeout(() => {
           window.location.href = 'mainPage.html';
       }, 600);
+   document.querySelector('.container').classList.add('visible');
+    document.getElementById('typewriterText').classList.add('typing');
+    document.querySelector('.enter-button').classList.add('visible');
+    document.querySelector('.markButton').classList.add('visible');
   });
 });
