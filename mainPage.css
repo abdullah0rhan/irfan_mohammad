@@ -47,6 +47,8 @@ font-style: normal;
 }
 
 .section {
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
   padding: 60px 20px;
   margin-bottom: 40px;
   background-color: transparent;
