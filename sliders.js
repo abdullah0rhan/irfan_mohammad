@@ -42,7 +42,7 @@ function createSlider(container) {
       }
   });
 
-  // Download button functionality
+
   const downloadButtons = container.querySelectorAll('.download-button');
   downloadButtons.forEach(button => {
       button.addEventListener('click', function() {
