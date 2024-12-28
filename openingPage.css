@@ -56,9 +56,14 @@ body {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
   fill: #64ffda;
+  margin-bottom: 3rem; /* Add some space below the logo */
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  width: auto; /* Adjust logo size as needed */
+  height: auto;
 }
 
 .typewriter-text {
@@ -71,11 +76,13 @@ body {
   border-right: 2px solid #64ffda;
   opacity: 0;
   width: 0;
+  display: inline-block;
+
 }
 
 .typewriter-text.typing {
   opacity: 1;
-  animation: typing 1s steps(40, end) forwards,
+  animation: typing 1s steps(20, end) forwards,
              blink-caret 0.75s step-end infinite;
 }
 
@@ -106,26 +113,6 @@ body {
   transform: scale(1.07);
 }
 
-/* Improved splash effect */
-.splash {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 0px;
-  height: 0px;
-  background: var(--black);
-  border-radius: 50%;
-  z-index: 1000;
-  transition: all 1s ease-in-out;
-}
-
-.splash.active {
-  transform: translate(-50%, -50%) scale(1);
-  width: 300vw;
-  height: 300vw;
-}
-
 @keyframes float-math {
   0% {
       transform: translateY(100vh) rotate(0deg);
@@ -150,4 +137,16 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+@media (max-width: 768px) {
+  .typewriter-text {
+    font-size: 1rem;
+  }
+  .enter-button,
+  .markButton {
+    display: block; 
+    width: 50%; 
+    margin: 10px auto; 
+    text-align: center; 
+  }
 }
