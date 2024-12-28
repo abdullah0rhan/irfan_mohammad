@@ -57,12 +57,12 @@ body {
 
 .logo {
   fill: #64ffda;
-  margin-bottom: 3rem; /* Add some space below the logo */
+  margin-bottom: 3rem; 
   display: flex;
   justify-content: center;
 }
 .logo img {
-  width: auto; /* Adjust logo size as needed */
+  width: auto; 
   height: auto;
 }
 
