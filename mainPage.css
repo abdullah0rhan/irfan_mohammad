@@ -205,6 +205,8 @@ img{
 }
 
 .math-symbol {
+  font-family: 'Courier New', monospace;
+    font-weight: bolder;
   position: absolute;
   font-size: 24px;
   opacity: 0.3;
